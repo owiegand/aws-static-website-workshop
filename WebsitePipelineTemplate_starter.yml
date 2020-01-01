@@ -1,0 +1,28 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "Pipeline for the AWS static website workshop"
+
+Parameters:
+  GithubOwner:
+    Type: String
+    Description: "Github repo owner"
+  GithubRepo:
+    Type: String
+    Description: "Github repo name"
+  GithubOAuthToken:
+    Type: String
+    Description: "Github personal access token"
+
+Resources:
+  # S3 bucket that the website will be deployed to.
+  DeploymentBucket:
+
+  # S3 bucket that code pipeline artifacts will be stored in.
+  PipelineArtifactsBucket:
+
+  # AWS CodePipeline that takes our website from Github and deploys
+  # it to the S3 bucket.
+  WebsiteCodeDeploymentPipeline:
+
+  # IAM role used by the deployment pipeline. This gives the pipeline
+  # the needed permissions to deploy our website.
+  CodePipelineRole:
